@@ -180,8 +180,8 @@ RFC [[Matsakis et al. 2017][nllrfc]]:
 
 > - any loans whose region does not include P are killed;
 > - if this is a borrow statement, the corresponding loan is generated;
-> - if this is an assignment lv = <rvalue>, then any loan for some path P of
->   which lv is a prefix is killed.
+> - if this is an assignment `lv = <rvalue>`, then any loan for some path P of
+>   which `lv` is a prefix is killed.
 
 While PriML is a garbage collected language, meaning a borrow checker & the related concept of lifetimes doesn't matter for most variable types, tracking the lifetime & loans of a condition variable allows for for using dataflow analysis to detect priority inversions.
 

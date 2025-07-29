@@ -1,0 +1,206 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * COLORS                                                                      *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+:root {
+  /* color names
+   * ===========
+   * from github.com/romainl/Apprentice/colors/apprentice.erb
+   *
+   * each color uses the name & spec defined in the referenced file
+   **/
+  /* NONE */
+  --code-color-base-white: #ffffff;
+  /* NONE */
+  --code-color-base-almost-black: #1c1c1c;
+  --code-color-base-darkergrey: #262626;
+  /* only used by ui elements */
+  --code-color-base-grey: #303030;
+  /* only used by ui elements */
+  --code-color-base-grey: #444444;
+  --code-color-base-mediumgrey: #585858;
+  --code-color-base-lightgrey: #6c6c6c;
+  --code-color-base-lightergrey: #bcbcbc;
+  --code-color-base-lightestgrey: #dedede;
+  /* Normal-fg */
+  /* NONE */
+  --code-color-base-purple: #5f5f87;
+  --code-color-base-lightpurple: #8787af;
+  --code-color-base-blue: #5f87af;
+  --code-color-base-lightblue: #87afd7;
+  --code-color-base-aqua: #5f8787;
+  /* only used by ui elements */
+  --code-color-base-lightaqua: #5fafaf;
+  --code-color-base-green: #5f875f;
+  --code-color-base-lightgreen: #87af87;
+  /* only used by ui elements */
+  --code-color-base-ocre: #87875f;
+  --code-color-base-yellow: #ffffaf;
+  --code-color-base-orange: #ff8700;
+  --code-color-base-red: #af5f5f;
+
+  /* vim group names to colors
+   * ----------
+   *
+   * maps vim colors to vim group names for referencing by purpose
+   */
+  --code-color-vim-normal-fg: var(--code-color-base-darkergrey);
+  --code-color-vim-normal-bg: var(--code-color-base-lightestgrey);
+  --code-color-vim-nontext-fg: var(--code-color-base-mediumgrey);
+
+  --code-color-vim-linenr-fg: var(--code-color-base-lightgrey);
+  --code-color-vim-comment-fg: var(--code-color-base-mediumgrey);
+  --code-color-vim-constant-fg: var(--code-color-base-orange);
+  --code-color-vim-error-fg: var(--code-color-base-red);
+  --code-color-vim-identifier-fg: var(--code-color-base-blue);
+  --code-color-vim-special-fg: var(--code-color-base-green);
+  --code-color-vim-statement-fg: var(--code-color-base-lightblue);
+  --code-color-vim-string-fg: var(--code-color-base-lightgreen);
+  --code-color-vim-type-fg: var(--code-color-base-lightpurple);
+  --code-color-vim-underlined-fg: var(--code-color-base-aqua);
+  --code-color-vim-errormsg-fg: var(--code-color-base-darkergrey);
+  --code-color-vim-errormsg-bg: var(--code-color-base-red);
+  --code-color-vim-warningmsg-fg: var(--code-color-base-red);
+  --code-color-vim-function-fg: var(--code-color-base-yellow);
+}
+
+/* light-mode color scheme
+ */
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --code-color-vim-normal-bg: var(--code-color-base-darkergrey);
+    --code-color-vim-normal-fg: var(--code-color-base-lightergrey);
+    --code-color-vim-nontext-fg: var(--code-color-base-mediumgrey);
+  }
+}
+
+/* Mappings
+ * ========
+ *
+ * map color names above to highlight.js css scopes
+ */
+/* Normal */
+
+pre,
+code {
+  background: var(--code-color-vim-normal-bg);
+  color: var(--code-color-vim-normal-fg);
+}
+
+/* Comments */
+.hljs-comment,
+.hljs-quote {
+  color: var(--code-color-vim-comment-fg);
+}
+
+/* Constants */
+.hljs-number,
+.hljs-built_in,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-literal {
+  color: var(--code-color-vim-constant-fg);
+}
+
+/* String literals */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+  color: var(--code-color-vim-string-fg);
+}
+
+/* Types */
+.hljs-type {
+  color: var(--code-color-vim-underlined-fg);
+}
+
+/* Punctuation */
+.hljs-punctuation {
+  color: var(--code-color-vim-statement-fg);
+}
+
+/* Functions */
+.hljs-title,
+.hljs-section {
+  color: var(--code-color-vim-function-fg);
+}
+
+/* Keywords, statements, operators */
+.hljs-keyword,
+.hljs-symbol,
+.hljs-selector-tag {
+  color: var(--code-color-vim-statement-fg);
+}
+
+/* Variables, identifiers */
+.hljs-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: var(--code-color-vim-identifier-fg);
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * FONTS                                                                       *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* general code font styles */
+pre code,
+code {
+  font-family: var(--fonts-family-mono);
+  font-size: var(--fonts-size-regular);
+}
+
+/* Comments */
+.hljs-comment,
+.hljs-quote {
+  font-style: italic;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * LAYOUT                                                                      *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+code {
+  margin: -0.1rem 0;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.3rem;
+}
+
+pre {
+  padding: 0.5rem 2rem;
+  margin: 0.5rem 0;
+}
+pre > code {
+  padding: 0;
+}
+
+pre p {
+  padding: 0;
+  margin: 0;
+}
+
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * SCROLL BEHAVIOUR/STYLES                                                     *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+pre {
+  overflow-x: scroll;
+}
+
+pre::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+}
+
+pre::-webkit-scrollbar-track {
+  background-color: var(--code-color-vim-normal-bg);
+  border-radius: 0.25rem;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background-color: var(--colors-action);
+  border-radius: 0.25rem;
+}

@@ -1,0 +1,34 @@
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--colors-accent1);
+}
+.markdown-alert {
+  padding: var(--layout-margin-small) var(--layout-margin);
+  margin-bottom: var(--layout-margin);
+  color: inherit;
+  border-left: 0.25em solid var(--colors-dark);
+}
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--colors-accent1);
+}
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: var(--fonts-weight-sans-normal-bold);
+  align-items: center;
+  line-height: 1;
+}
+.markdown-alert > :first-child {
+  margin-top: 0;
+}
+.markdown-alert > p:not(:first-child) {
+  margin: 0;
+}
+
+.octicon {
+  display: inline-block;
+  overflow: visible;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+.mr-2 {
+  margin-right: var(--layout-margin-small);
+}

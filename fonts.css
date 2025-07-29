@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Cascadia Code";
+  src:
+    url("../fonts/CascadiaCode.woff2") format("woff2"),
+    url("../fonts/CascadiaCode.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat Italic";
+  src: url("../fonts/Montserrat-Italic-VariableFont_wght.ttf")
+    format("truetype");
+  font-display: swap;
+}
+
+:root {
+  --fonts-family-serif: Cascadia Code, serif;
+  --fonts-family-sans: Montserrat, sans-serif;
+  --fonts-family-sans-italic: "Montserrat Italic", italic;
+  --fonts-family-mono: Cascadia Code, monospace;
+
+  --fonts-size-tiny: 0.6rem;
+  --fonts-size-small: 0.75rem;
+  --fonts-size-regular: 1rem;
+  --fonts-size-regular-medium: 1.25rem;
+  --fonts-size-medium: 1.75rem;
+  --fonts-size-large: 2.25rem;
+  --fonts-size-extra-large: 3rem;
+  --fonts-size-huge: 3.5rem;
+
+  --fonts-weight-sans-normal: 400;
+  --fonts-weight-sans-normal-bold: 500;
+  --fonts-weight-sans-semi-bold: 600;
+  --fonts-weight-serif-normal: var(--fonts-weight-sans-normal);
+  --fonts-weight-serif-normal-bold: 500;
+  --fonts-weight-serif-semi-bold: 600;
+  --fonts-weight-serif-bold: 700;
+  --fonts-weight-mono-semi-bold: 600;
+  --fonts-weight-mono-regular: 400;
+  --fonts-weight-mono-light: 300;
+
+  font-size: 16px;
+}
+@media screen and (max-width: env(--layout-screen-small)) {
+  :root {
+    font-size: 14px;
+  }
+}
+@media print {
+  :root {
+    --fonts-size-tiny: 6pt;
+    --fonts-size-small: 8pt;
+    --fonts-size-regular: 10pt;
+    --fonts-size-regular-medium: 12pt;
+    --fonts-size-medium: 14pt;
+    --fonts-size-large: 16pt;
+    --fonts-size-extra-large: 20pt;
+    --fonts-size-huge: 24pt;
+    font-size: 10px;
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --fonts-weight-sans-normal: 500;
+    --fonts-weight-sans-normal-bold: 550;
+    --fonts-weight-sans-semi-bold: 600;
+  }
+}
